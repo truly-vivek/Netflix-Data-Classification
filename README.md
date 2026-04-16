@@ -29,8 +29,7 @@ This project implements a complete large-scale machine learning pipeline using A
 └── README.md                  # This file
 ```
  
-> **Note:** Use `net-final 1.ipynb` as the primary code submission. The earlier notebook `netflix-project (4).ipynb` is an intermediate version retained for reference. The HTML export (`net-final 1.html`) contains all rendered visualisations and can be viewed in any web browser without running the notebook.
- 
+
 ---
  
 ## Requirements
@@ -59,11 +58,11 @@ This project implements a complete large-scale machine learning pipeline using A
 ## Dataset Setup
  
 1. Download the Netflix Titles dataset from Kaggle:  
-   [https://www.kaggle.com/datasets/shivamb/netflix-shows](https://www.kaggle.com/datasets/shivamb/netflix-shows)
+   [https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization](https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization)
  
 2. Upload the CSV file to your Databricks workspace:
    - Go to **Data** → **Add Data** → **Upload File**
-   - Upload `netflix_titles.csv`
+   - Upload `net.csv`
  
 3. Register the table in Unity Catalog or DBFS. The notebook loads it as:
    ```python
@@ -71,7 +70,7 @@ This project implements a complete large-scale machine learning pipeline using A
    ```
    If using DBFS, replace this line with:
    ```python
-   df_raw = spark.read.csv("/FileStore/netflix_titles.csv", header=True, inferSchema=True)
+   df_raw = spark.read.csv("/FileStore/net.csv", header=True, inferSchema=True)
    ```
  
 ---
@@ -166,7 +165,7 @@ The notebook was developed on Databricks Serverless compute, which has the follo
 - Spark version displayed as **4.1.0** (Databricks Connect runtime).
  
 ### GenAI Usage Disclosure
-In accordance with CS6502 academic integrity requirements: Claude (Anthropic) was used to assist with report writing, refinement, and README generation. All code in the notebook was written and executed by the project group. Where AI-assisted text was used, it has been reviewed, edited, and verified by group members.
+In accordance with CS6502 academic integrity requirements: Claude (Anthropic) was partially used to assist with report writing, refinement. All code in the notebook was written and executed by the project group.
  
 ---
  
